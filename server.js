@@ -16,4 +16,9 @@ db.on("disconnected", () => console.log("Mongo Disconnected"));
 
 app.use(methodOverride("_method"));
 app.use(express.urlencoded({extended: true}));
+
+app.get("/", (req,res) => {
+    res.render("home.ejs");
+});
+
 app.listen(PORT);
