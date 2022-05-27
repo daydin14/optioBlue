@@ -14,4 +14,6 @@ db.on("error", (err) => console.log(err.message + " is mongoDB not running?"));
 db.on("connected", () => console.log("Mongo Connected"));
 db.on("disconnected", () => console.log("Mongo Disconnected"));
 
+app.use(methodOverride("_method"));
+app.use(express.urlencoded({extended: true}));
 app.listen(PORT);
