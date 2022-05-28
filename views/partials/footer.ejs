@@ -1,17 +1,17 @@
     </body>
     <style>
-        footer {
+        #footer {
             background-color: slategrey;
-            position: absolute;
+            position: relative;
+            left: 0;
             bottom: 0;
             width: 100%;
-
         }
         #name {
             color: #11FFEE;
         }
         .bottomLink {
-            font-size: 22px;
+            font-size: 12px;
             
         }
         .rights {
@@ -21,15 +21,37 @@
             text-decoration: underline;
         }
     </style>
-    <footer>
-        <h1 id="name">Optio Blue</h1>
-        <a href="/services" class="bottomLink">Services</a> <br>
-        <a href="/reviews" class="bottomLink">Reviews</a> <br>
-        <a href="/contact" class="bottomLink">Contact</a> <br>
-        <p class="rights">
-            David Aydin <br> 
-            Optio Blue <br>
-            2022 © All Rights Reserved
-        </p>
-    </footer>
+    <div id="footer">
+        <footer>
+            <!-- <h1 id="name">Optio Blue</h1>
+            <a href="/services" class="bottomLink">Services</a> <br>
+            <a href="/reviews" class="bottomLink">Reviews</a> <br>
+            <a href="/contact" class="bottomLink">Contact</a> <br> -->
+
+            <table>
+                <th>Optio Blue</th>
+                <p class="rights">
+                    David Aydin |
+                    Optio Blue | 
+                    2022 © All Rights Reserved
+                </p>
+                <tr>
+                    <td>
+                        <a href="/services" class="bottomLink">Services</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="/reviews" class="bottomLink">Reviews</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="/contact" class="bottomLink">Contact</a>
+                    </td>
+                </tr>
+            </table>
+            
+        </footer>
+    </div>
 </html>
