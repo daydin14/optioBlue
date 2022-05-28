@@ -13,24 +13,31 @@
 <h3 id="title">Dry Cleaning Name + LOGO</h3>
 
 <h4>Sign In:</h4>
-
+<!-- <script>
+    function email() {
+        document.getElementById("email");
+    }
+    function phone() {
+        document.getElementById("phone");
+    }
+</script> -->
 <div class="options">
-    <button class="email" onclick="email()">Sign in with E-Mail</button><br>
-    <button class="phone" onclick="phone()">Sign in with Phone #</button><br>
-    <button class="signup"><a href="/signup">Sign Up</a></button><br>
-
-    <% function email() { %>
-        <h1>hello</h1>
+    <% function email() {  %>
+        <p>Email</p>
         <input type="text" name="email" placeholder="e-mail"> <br>
         <input type="password" name="password" placeholder="password"> <br>  
     <% }; %>
 
-    <% function phone() { %>
-        <h1>hello</h1>
+    <% function phone() {  %>
+        <h1>phone</h1>
         <input type="text" name="phone" placeholder="phone #"> <br>
         <input type="password" name="password" placeholder="password"> <br>  
     <% }; %>
 
+    <button onclick="email()" id="email">Sign in with E-Mail</button><br>
+    <button onclick="phone()" id="phone">Sign in with Phone #</button><br>
+    <button><a href="/signup">Sign Up</a></button><br>
+
 </div>
-</form>
+
 <%- include ("partials/footer") %>
