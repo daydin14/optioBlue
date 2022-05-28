@@ -3,41 +3,65 @@
 <br />
 <style>
   .dropdown {
-    position: relative;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
   }
   .menu {
     display: block;
+    min-width: 300px;
     width: 100%;
     border: none;
     background-color: slategray;
     color: whitesmoke;
     padding: 5px 28px;
-    font-size: 32px;
+    font-size: 48px;
     cursor: pointer;
     text-align: center;
   }
   .menuLinks {
     display: none;
-    position: absolute;
-    background-color: slateblue;
+    position: fixed;
+    background-color: lightgrey;
     min-width: 300px;
+    width: 100%;
+    font-size: 32px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+    z-index: 150;
   }
   .menuLinks a {
-    color: black;
-    display: block;
+    color: red;
+    display: inline-block;
+    position: relative;
+    text-align: center;
   }
 
   .menuLinks a:hover {
-    background-color: #ddd;
+    background-color: #11FFEE;
   }
   .dropdown:hover .menuLinks {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   .dropdown:hover .menu {
     background-color: darkgray;
+    position: relative;
+  }
+  #message {
+      position: relative;
+      text-align: center;
+  }
+  .Services {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      /* flex-flow row wrap; */
+      justify-content: space-around;
+
+  }
+  img {
+      max-width: 300px;
+      height: 150px;
   }
 </style>
 <div class="dropdown">
@@ -50,5 +74,53 @@
     <a href="/signup">Sign Up</a>
   </div>
 </div>
-
+<br>
+<p id="message">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, quidem explicabo. Commodi possimus nostrum rerum recusandae, alias reprehenderit mollitia, fugit dolor libero sit earum nemo qui, repudiandae sapiente sequi in?
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure quis vero, voluptate officia minima unde id, quisquam veniam quos obcaecati fuga impedit, molestias alias quam itaque deserunt. Eos, ab et?
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores reiciendis odio veritatis quidem. Excepturi explicabo voluptatibus quod! Explicabo esse error voluptatum voluptas consectetur placeat dolorum eaque suscipit fugit. Id, non!
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur blanditiis dolores totam excepturi eligendi voluptatem perspiciatis? Deserunt numquam omnis rem delectus aperiam molestias quos, sed facere sint aliquid doloremque saepe!
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum numquam nesciunt eius eligendi maiores, iure, adipisci enim culpa corrupti illum neque voluptates velit, aliquam voluptatum eveniet ad dolorem asperiores expedita!
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet adipisci sequi labore nisi laboriosam fugiat iste earum obcaecati quasi magnam iusto provident eveniet nobis, neque aperiam deserunt cum quis at!
+</p>
+<br>
+<h2>Services</h2>
+<div class="Services">
+    <div class="service">
+        <img src="https://images.unsplash.com/photo-1520434901111-8e9bcb42c628?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="blob">
+        <p>Dry Cleaning</p>
+    </div>
+    <div class="service">
+        <img src="https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="blob">
+        <p>Laundry</p>
+    </div>
+    <div class="service">
+        <img src="https://images.unsplash.com/photo-1578353022142-09264fd64295?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=715&q=80" alt="blob">
+        <p>Alterations</p>
+    </div>
+    <div class="service">
+        <img src="https://images.unsplash.com/photo-1489274495757-95c7c837b101?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=715&q=80" alt="blob">
+        <p>Pressing</p>
+    </div>
+    <div class="service">
+        <img src="https://images.unsplash.com/photo-1605433974949-fa9fadb0c0e9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80" alt="blob">
+        <p>Leather</p>
+    </div>
+    <div class="service">
+        <img src="https://images.unsplash.com/photo-1514313996915-89d3aff2b79e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1122&q=80" alt="blob">
+        <p>Fur</p>
+    </div>
+    <div class="service">
+        <img src="https://images.unsplash.com/photo-1487163731010-29462200612c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80" alt="blob">
+        <p>Bridal</p>
+    </div>
+    <div class="service">
+        <img src="https://images.unsplash.com/photo-1518816086351-fddbdc9a20d0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="blob">
+        <p>Drapes</p>
+    </div>
+    <div class="service">
+        <img src="https://images.unsplash.com/photo-1616627561950-9f746e330187?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="blob">
+        <p>Table & Bedding</p>
+    </div>
+</div>
 <%- include ("partials/footer") %>
