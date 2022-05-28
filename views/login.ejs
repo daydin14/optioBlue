@@ -1,4 +1,36 @@
 <%- include ("partials/head") %>
 <h1>Login</h1>
 <button><a href="/">Home</a></button>
+
+<style>
+    #title {
+        text-align: center;
+    }
+    .options {
+        text-align: center;
+    }
+</style>
+<h3 id="title">Dry Cleaning Name + LOGO</h3>
+
+<h4>Sign In:</h4>
+
+<div class="options">
+    <button class="email" onclick="email()">Sign in with E-Mail</button><br>
+    <button class="phone" onclick="phone()">Sign in with Phone #</button><br>
+    <button class="signup"><a href="/signup">Sign Up</a></button><br>
+
+    <% function email() { %>
+        <h1>hello</h1>
+        <input type="text" name="email" placeholder="e-mail"> <br>
+        <input type="password" name="password" placeholder="password"> <br>  
+    <% }; %>
+
+    <% function phone() { %>
+        <h1>hello</h1>
+        <input type="text" name="phone" placeholder="phone #"> <br>
+        <input type="password" name="password" placeholder="password"> <br>  
+    <% }; %>
+
+</div>
+</form>
 <%- include ("partials/footer") %>
