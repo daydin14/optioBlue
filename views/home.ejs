@@ -1,4 +1,44 @@
 <%- include ("partials/head") %>
-<h1>Index Page</h1>
+<h1>Home Page</h1><br>
+<style>
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+    .menu {
+        background-color: slategray;
+        color: whitesmoke;
+        font-size: 32px;
+        border: none;
+    }
+    .menuLinks {
+        display: none;
+        position: absolute;
+        background-color: slateblue;
+        min-width: 300px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+    .menuLinks a {
+        color: black;
+        display: block;
+    }
 
+    .menuLinks a:hover {background-color: #ddd;}
+    .dropdown:hover .menuLinks {display: block}
+    .dropdown:hover .menu {background-color: gray;}
+
+
+
+</style>
+<div class="dropdown">
+    <button class="menu">menu</button>
+    <div class="menuLinks">
+        <a href="/services">Services</a>
+        <a href="/reviews">Reviews</a>
+        <a href="/contact">Contact</a>
+        <a href="/login">Login</a>
+        <a href="/signUp">Sign Up</a>
+    </div>
+</div>
 <%- include ("partials/footer") %>
