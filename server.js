@@ -23,8 +23,17 @@ app.get("/", (req, res) => {
 app.get("/services", (req, res) => {
   res.render("services.ejs");
 });
+app.get("/reviews", (req, res) => {
+  res.render("reviews.ejs");
+});
 app.get("/contact", (req, res) => {
   res.render("contact.ejs");
+});
+app.get("/login", (req, res) => {
+  res.render("login.ejs");
+});
+app.get("/signup", (req, res) => {
+  res.render("signup.ejs");
 });
 
 app.listen(PORT);
