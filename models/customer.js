@@ -6,6 +6,7 @@ const customerSchema = new Schema(
     {phoneNumber: Number},
     {email: String},
     {isCustomer: false},
+    {orders: Object}
 );
 const Customer = mongoose.model("Customer", customerSchema);
 module.exports = Customer;
