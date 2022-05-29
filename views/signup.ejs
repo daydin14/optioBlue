@@ -1,5 +1,5 @@
 <%- include ("partials/head") %>
-<h1>Sign Up</h1>
+<!-- <h1>Sign Up</h1>
 <button><a href="/">Home</a></button>
 
 <style>
@@ -17,18 +17,91 @@
 <h3 id="title">Dry Cleaning Name + LOGO</h3>
 
 <h4>Create your account:</h4>
-
 <form action="/login" method="POST" class="signup">
-    <p>first name</p>
-    <input type="text" name="firstName" placeholder="First Name"> <br>
-    <p>last name</p>
-    <input type="text" name="lastName" placeholder="Last Name"> <br>
-    <p>phone number</p>
-    <input type="number" name="cellphone" placeholder="Phone #"> <br>
-    <p>email</p>
-    <input type="text" name="email" placeholder="E-Mail"> <br>
+            <p>first name</p>
+            <input type="text" name="firstName" placeholder="First Name"> <br>
+            <p>last name</p>
+            <input type="text" name="lastName" placeholder="Last Name"> <br>
+            <p>phone number</p>
+            <input type="number" name="cellphone" placeholder="Phone #"> <br>
+            <p>email</p>
+            <input type="text" name="email" placeholder="E-Mail"> <br>
+        
+            <input type="button" name="cancel" value="Cancel">
+            <input type="submit" name="continute" value="Continue">
+        </form> -->
 
-    <input type="button" name="cancel" value="Cancel">
-    <input type="submit" name="continute" value="Continue">
-</form>
+<style>
+    .container {
+        width: 80vw;
+        height: 70vw;
+        margin: 50px auto;
+        display: flex;
+        border-radius: 10px;
+        box-shadow: 1px 1px 10px gray, -1px -1px 10px gray, 1px -1px 10px gray, -1px 1px 10px gray;
+    }
+    .sidebar {
+        width: 25%;
+        border-radius: 0 10px 10px 0;
+        background: url("https://images.unsplash.com/photo-1527519124254-9dafd8b3533b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80");
+        background-size: cover;
+        background-position: 30%;
+        border-radius: 10px 0 0 10px;
+    }
+    .registration {
+        width: 75%;
+        border-radius: 0 10px 10px 0;
+        padding: 15px;
+        box-sizing: border-box;
+        overflow: auto;
+    }
+    fieldset {
+        border: 1px solid gray;
+        border-radius: 5px;
+        padding: 20px;
+        margin: 20px 0;
+    }
+    legend {
+        padding: 0px 10px;
+        font-weight: 200;
+        display: block;
+    }
+    input {
+        width: 100%;
+        margin: 10px 0;
+        padding: 10px;
+        box-sizing: border-box;
+        border: 1px solid gray;
+    }
+</style>
+<button><a href="/">Home</a></button>
+<div class="container">
+    <div class="sidebar"></div>
+    <div class="registration">
+        <h1>Register</h1>
+        <form action="/login" method="POST" class="signup">
+            <fieldset class="account-info">
+                <legend>Personal Information</legend>
+
+                <label for="firstName">First Name</label>
+                <input type="text" name="firstName" placeholder="First Name"/>
+
+                <label for="lastName">Last Name</label>
+                <input type="text" name="lastName" placeholder="Last Name"/>
+
+                <label for="phoneNumber">Phone #</label>
+                <input type="number" name="cellphone" placeholder="Phone #"/>
+
+                <label for="email">E-Mail</label>
+                <input type="text" name="email" placeholder="E-Mail"/>
+            </fieldset>
+            <input type="button" name="cancel" value="Cancel"/>
+            <input type="submit" name="continute" value="Continue"/>
+        </form>
+    </div>
+</div>
+
+
+
+
 <%- include ("partials/footer") %>
