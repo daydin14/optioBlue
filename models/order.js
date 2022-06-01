@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 const orderSchema = new Schema(
     {clothing: String},
     {qty: Number},
-    {isCustomer: false},
+    {price: Number},
 );
 const Order = mongoose.model("Order", orderSchema);
 module.exports = Order;
