@@ -1,53 +1,49 @@
 <%- include ("partials/head") %>
+<style>
+  #title {
+    text-align: center;
+  }
+  .options {
+    text-align: center;
+  }
+</style>
 <h1>Login</h1>
 <button><a href="/">Home</a></button>
 
-<style>
-    #title {
-        text-align: center;
-    }
-    .options {
-        text-align: center;
-    }
-</style>
 <h3 id="title">Dry Cleaning Name + LOGO</h3>
-
 <h4>Sign In:</h4>
-<!-- <script>
-    function email() {
-        document.getElementById("email");
-    }
-    function phone() {
-        document.getElementById("phone");
-    }
-</script> -->
 <div class="options">
-    <% function email() {  %>
-        <p>Email</p>
-        <input type="text" name="email" placeholder="e-mail"> <br>
-        <input type="password" name="password" placeholder="password"> <br>  
-    <% }; %>
+  <% function email() { %>
+  <p>Email</p>
+  <input type="text" name="email" placeholder="e-mail" /> <br />
+  <input type="password" name="password" placeholder="password" /> <br />
+  <% }; %> <% function phone() { %>
+  <h1>phone</h1>
+  <input type="text" name="phone" placeholder="phone #" /> <br />
+  <input type="password" name="password" placeholder="password" /> <br />
+  <% }; %>
 
-    <% function phone() {  %>
-        <h1>phone</h1>
-        <input type="text" name="phone" placeholder="phone #"> <br>
-        <input type="password" name="password" placeholder="password"> <br>  
-    <% }; %>
-
-    <button onclick="email()" id="email">Sign in with E-Mail</button><br>
-    <button onclick="phone()" id="phone">Sign in with Phone #</button><br>
-    <button><a href="/signup">Sign Up</a></button><br>
-
+  <button id="email">Sign in with E-Mail</button><br />
+  <button id="phone">Sign in with Phone #</button><br />
+  <button><a href="/signup">Sign Up</a></button><br />
 </div>
 <script>
-    $("#email").click(function () {
-        $("#email").append(
-            `<form action="/loggedin?_method=PUT" method="POST">
-                <input type="text" name="email" placeholder="E-Mail"><br>
-                <input type="password" name="password" placeholder="password"><br>
+  $("#email").click(function () {
+    $("#email").append(
+      `<form action="/loggedin?_method=PUT" method="POST">
+                <input type="text" name="email" placeholder="E-Mail"><br/>
+                <input type="password" name="password" placeholder="password"><br/>
                 <input type="submit" name="" value="Sign In" />
             </form>`
-        );
-    });
+    );
+  });
+  $("#phone").click(function () {
+    $("#phone").append(
+      `<form>
+            <input type="text" name="phone" placeholder="phone #" /> <br />
+            <input type="password" name="password" placeholder="password" /> <br />
+          </form>`
+    );
+  });
 </script>
 <%- include ("partials/footer") %>
