@@ -51,4 +51,35 @@
     );
   });
 </script>
+
+<style>
+  summary {
+    text-align: center;
+  }
+  #signup {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+  }
+</style>
+<details>
+  <summary>Sign in with E-Mail</summary>
+  <form action="/loggedin?_method=PUT" method="POST">
+    <input type="text" name="email" placeholder="E-Mail"><br/>
+    <input type="password" name="password" placeholder="password"><br/>
+    <input type="submit" name="" value="Sign In" />
+  </form>
+</details>
+
+<details>
+  <summary>Sign in with Phone #</summary>
+  <form action="/loggedin?_method=PUT" method="POST">
+    <input type="text" name="phone" placeholder="phone #" /> <br />
+    <input type="password" name="password" placeholder="password" /> <br />
+    <input type="submit" name="" value="Sign In" />
+  </form>
+</details>
+
+<button id="signup"><a href="/signup">Sign Up</a></button><br />
 <%- include ("partials/footer") %>
