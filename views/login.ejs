@@ -5,44 +5,49 @@
   }
   .options {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  h1 {
+    color: lemonchiffon;
+  }
+  form {
+    font-size: 24px;
+    text-align: center;
   }
 </style>
-<h1>Login</h1>
+
 <button><a href="/">Home</a></button>
+<h1 id="title">Dry Cleaning Name + LOGO</h1>
 
-<h3 id="title">Dry Cleaning Name + LOGO</h3>
-<h4>Sign In:</h4>
 <div class="options">
-  <% function email() { %>
-  <p>Email</p>
-  <input type="text" name="email" placeholder="e-mail" /> <br />
-  <input type="password" name="password" placeholder="password" /> <br />
-  <% }; %> <% function phone() { %>
-  <h1>phone</h1>
-  <input type="text" name="phone" placeholder="phone #" /> <br />
-  <input type="password" name="password" placeholder="password" /> <br />
-  <% }; %>
-
   <button id="email">Sign in with E-Mail</button><br />
   <button id="phone">Sign in with Phone #</button><br />
-  <button><a href="/signup">Sign Up</a></button><br />
+  <button id="signup"><a href="/signup">Sign Up</a></button><br />
 </div>
 <script>
   $("#email").click(function () {
     $("#email").append(
-      `<form action="/loggedin?_method=PUT" method="POST">
+      `<div id="signin1">
+          <form action="/loggedin?_method=PUT" method="POST">
                 <input type="text" name="email" placeholder="E-Mail"><br/>
                 <input type="password" name="password" placeholder="password"><br/>
                 <input type="submit" name="" value="Sign In" />
-            </form>`
+            </form>
+        </div>`
     );
   });
   $("#phone").click(function () {
     $("#phone").append(
-      `<form>
+      `<div id="signin2">
+          <form action="/loggedin?_method=PUT" method="POST">
             <input type="text" name="phone" placeholder="phone #" /> <br />
             <input type="password" name="password" placeholder="password" /> <br />
-          </form>`
+            <input type="submit" name="" value="Sign In" />
+          </form>
+        </div>`
     );
   });
 </script>
