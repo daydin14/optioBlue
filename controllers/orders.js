@@ -19,7 +19,11 @@ orderRouter.get("/new", (req, res) => {
   res.render("order/new.ejs");
 });
 // Delete
-
+orderRouter.delete("/:id", (req, res) => {
+  Order.findByIdAndDelete(req.params.id, () => {
+    res.redirect("/order");
+  });
+});
 // Update
 orderRouter.put("/:id", (req, res) => {
   Order.findByIdAndUpdate(req.params.id, req.body, () => {
