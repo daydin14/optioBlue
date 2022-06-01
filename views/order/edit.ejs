@@ -1,3 +1,29 @@
 <%- include ("../partials/head") %>
+<style>
+  input {
+    border-radius: 20px;
+  }
+</style>
 <h1>Edit Order Page</h1>
+
+<section>
+  <h2>Current Order Attributes:</h2>
+  <ul>
+    <li>Clothing: <%=order.clothing%></li>
+    <li>Qty: <%=order.qty%></li>
+    <li>Price: <%=order.price%></li>
+  </ul>
+</section>
+
+<section>
+  <form action="/order/<%=order._id%>?_method=PUT" method="POST">
+    <p>Clothing:</p>
+    <input type="text" name="clothing" /> <br />
+    <p>Quantity:</p>
+    <input type="number" name="qty" /> <br />
+    <p>Price:</p>
+    <input type="number" name="price" /> <br />
+    <input type="submit" value="Edit Order" /> <br />
+  </form>
+</section>
 <%- include ("../partials/footer") %>

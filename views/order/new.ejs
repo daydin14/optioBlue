@@ -1,11 +1,16 @@
 <%- include ("../partials/head") %>
+<style>
+  input {
+    border-radius: 20px;
+  }
+</style>
 <h1>New Order Page</h1>
 <form action="/order" method="POST">
-  Clothing:
+  <p>Clothing:</p>
   <input type="text" name="clothing" /> <br />
-  Qty:
+  <p>Quantity:</p>
   <input type="number" name="qty" /> <br />
-  Price:
+  <p>Price:</p>
   <input type="number" name="price" /> <br />
   <input type="submit" value="Create Order" /> <br />
 </form>
