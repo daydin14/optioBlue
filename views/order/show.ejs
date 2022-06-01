@@ -1,4 +1,16 @@
 <%- include ("../partials/head") %>
+<style>
+  button {
+    border-radius: 20px;
+  }
+  input {
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  input:hover {
+    background-color: red;
+  }
+</style>
 <h1>Order Show Page</h1>
 
 <section>
@@ -17,6 +29,7 @@
 </section>
 
 <section>
-  <a href="order/<%=order._id%>/edit">Edit</a>
+  <button><a href="/order/<%=order._id%>/edit">Edit</a></button>
+  <button><a href="/order">Back to Order Index</a></button>
 </section>
 <%- include ("../partials/footer") %>
