@@ -35,7 +35,9 @@ orderRouter.post("/", (req, res) => {
 // Edit
 orderRouter.get("/:id/edit", (req, res) => {
   Order.findById(req.params.id, (err, foundOrder) => {
-    res.redirect("/order");
+    res.render("../views/order/edit.ejs", {
+      order: foundOrder,
+    });
   });
 });
 // Show
