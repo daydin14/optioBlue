@@ -9,14 +9,14 @@ const Order = require("../models/order");
 // Index
 orderRouter.get("/", (req, res) => {
   Order.find({}, (err, foundOrders) => {
-    res.render("/order/index.ejs", {
+    res.render("../views/order/index.ejs", {
       order: foundOrders,
     });
   });
 });
 // New
 orderRouter.get("/new", (req, res) => {
-  res.render("order/new.ejs");
+  res.render("../views/order/new.ejs");
 });
 // Delete
 orderRouter.delete("/:id", (req, res) => {
@@ -45,7 +45,7 @@ orderRouter.get("/:id/edit", (req, res) => {
 // Show
 orderRouter.get("/:id", (req, res) => {
   Order.findById(req.params.id, (err, foundOrders) => {
-    res.render("order/show.ejs", {
+    res.render("../views/order/show.ejs", {
       order: foundOrders,
     });
   });
