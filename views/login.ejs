@@ -39,5 +39,15 @@
     <button><a href="/signup">Sign Up</a></button><br>
 
 </div>
-
+<script>
+    $("#email").click(function () {
+        $("#email").append(
+            `<form action="/loggedin?_method=PUT" method="POST">
+                <input type="text" name="email" placeholder="E-Mail"><br>
+                <input type="password" name="password" placeholder="password"><br>
+                <input type="submit" name="" value="Sign In" />
+            </form>`
+        );
+    });
+</script>
 <%- include ("partials/footer") %>
