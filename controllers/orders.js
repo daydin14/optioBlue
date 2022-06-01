@@ -37,6 +37,11 @@ orderRouter.post("/", (req, res) => {
   });
 });
 // Edit
+orderRouter.get("/:id/edit", (req, res) => {
+  Order.findById(req.params.id, (err, foundOrder) => {
+    res.redirect("/order");
+  });
+});
 // Show
 orderRouter.get("/:id", (req, res) => {
   Order.findById(req.params.id, (err, foundOrders) => {
