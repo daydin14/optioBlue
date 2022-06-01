@@ -1,3 +1,12 @@
 <%- include ("../partials/head") %>
 <h1>New Order Page</h1>
+<form action="/order" method="POST">
+  Clothing:
+  <input type="text" name="clothing" /> <br />
+  Qty:
+  <input type="number" name="qty" /> <br />
+  Price:
+  <input type="number" name="price" /> <br />
+  <input type="submit" value="Create Order" /> <br />
+</form>
 <%- include ("../partials/footer") %>
