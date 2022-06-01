@@ -1,3 +1,22 @@
 <%- include ("../partials/head") %>
 <h1>Order Show Page</h1>
+
+<section>
+  <h2>Order Attributes:</h2>
+  <ul>
+    <li>Clothing: <%=order.clothing%></li>
+    <li>Qty: <%=order.qty%></li>
+    <li>Price: <%=order.price%></li>
+  </ul>
+</section>
+
+<section>
+  <form action="/order/<%= order._id%>?_method=DELETE" method="POST">
+    <input type="submit" value="Delete Order" />
+  </form>
+</section>
+
+<section>
+  <a href="order/<%=order._id%>/edit">Edit</a>
+</section>
 <%- include ("../partials/footer") %>
