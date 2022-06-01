@@ -28,5 +28,12 @@ orderRouter.post("/", (req, res) => {
 });
 // Edit
 // Show
+orderRouter.get("/:id", (req, res) => {
+  Order.findById(req.params.id, (err, foundOrders) => {
+    res.render("order/show.ejs", {
+      order: foundOrders,
+    });
+  });
+});
 
 module.exports = orderRouter;
