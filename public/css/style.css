@@ -2,7 +2,6 @@ body {
   background-color: skyblue;
 }
 
-
 /* Home Page Drop Down Menu */
 .dropdown {
   display: flex;
@@ -29,7 +28,6 @@ body {
   font-size: 32px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 150;
-
 }
 .menuLinks a {
   color: whitesmoke;
@@ -61,7 +59,6 @@ body {
   color: white;
   font-size: 28px;
 }
-
 
 /* Services on Home Page and Service Page */
 .Services {
@@ -98,14 +95,13 @@ body {
   max-width: 300px;
   text-align: center;
   color: gray;
-  
 }
 #title {
   color: whitesmoke;
   text-align: center;
   background-color: #ffd24c;
   border-radius: 80px;
-  width: 10%;
+  width: 15%;
   margin: 0% 0% 5% 0%;
 }
 
@@ -124,7 +120,7 @@ body {
   text-align: center;
   display: flex;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
 }
 
 /* order pages */
