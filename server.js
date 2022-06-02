@@ -2,7 +2,7 @@ require("dotenv").config();
 const mongoose = require("mongoose");
 const express = require("express");
 const methodOverride = require("method-override");
-const PORT = 3000;
+const PORT = process.env.PORT;
 const app = express();
 const orderController = require("./controllers/orders");
 
