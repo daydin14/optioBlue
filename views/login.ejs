@@ -1,26 +1,6 @@
 <%- include ("partials/head") %>
-<style>
-  #title {
-    text-align: center;
-  }
-  .options {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-  }
-  h1 {
-    color: lemonchiffon;
-  }
-  form {
-    font-size: 24px;
-    text-align: center;
-  }
-</style>
-
 <button><a href="/">Home</a></button>
-<h1 id="title">Dry Cleaning Name + LOGO</h1>
+<h1 id="logo">Dry Cleaning Name + LOGO</h1>
 
 <div class="options">
   <button id="email">Sign in with E-Mail</button><br />
@@ -52,17 +32,6 @@
   });
 </script>
 
-<style>
-  summary {
-    text-align: center;
-  }
-  #signup {
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-  }
-</style>
 <details>
   <summary>Sign in with E-Mail</summary>
   <form action="/loggedin?_method=PUT" method="POST">

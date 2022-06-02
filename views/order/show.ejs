@@ -1,17 +1,4 @@
 <%- include ("../partials/head") %>
-<style>
-  button {
-    border-radius: 20px;
-  }
-  input {
-    border-radius: 20px;
-    cursor: pointer;
-  }
-  input:hover {
-    background-color: red;
-  }
-</style>
-<h1>Order Show Page</h1>
 
 <section>
   <h2>Order Attributes:</h2>
@@ -23,13 +10,10 @@
 </section>
 
 <section>
+  <button><a href="/order/<%=order._id%>/edit">Edit Order Details</a></button>
   <form action="/order/<%= order._id%>?_method=DELETE" method="POST">
     <input type="submit" value="Delete Order" />
   </form>
-</section>
-
-<section>
-  <button><a href="/order/<%=order._id%>/edit">Edit</a></button>
-  <button><a href="/order">Back to Order Index</a></button>
+  <button><a href="/order">Back to All Orders</a></button>
 </section>
 <%- include ("../partials/footer") %>

@@ -1,21 +1,16 @@
 <%- include ("../partials/head") %>
-<style>
-  input {
-    border-radius: 20px;
-  }
-  button {
-    border-radius: 20px;
-  }
-</style>
 <h1>New Order Page</h1>
 <form action="/order" method="POST">
+  <button><a href="/order">Back to All Orders</a></button>
+  
+
   <p>Clothing:</p>
   <input type="text" name="clothing" /> <br />
   <p>Quantity:</p>
   <input type="number" name="qty" /> <br />
   <p>Price:</p>
-  <input type="number" name="price" /> <br />
-  <input type="submit" value="Create Order" />
-  <button><a href="/order">Back to Order Index</a></button>
+  <input type="number" name="price" /> <br /> <br />
+  
+  <input type="submit" value="Create New Order" />
 </form>
 <%- include ("../partials/footer") %>

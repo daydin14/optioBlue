@@ -1,13 +1,6 @@
 <%- include ("../partials/head") %>
-<style>
-  input {
-    border-radius: 20px;
-  }
-</style>
-<h1>Edit Order Page</h1>
-
 <section>
-  <h2>Current Order Attributes:</h2>
+  <h2>Current Order Details:</h2>
   <ul>
     <li>Clothing: <%=order.clothing%></li>
     <li>Qty: <%=order.qty%></li>
@@ -22,8 +15,10 @@
     <p>Quantity:</p>
     <input type="number" name="qty" /> <br />
     <p>Price:</p>
-    <input type="number" name="price" /> <br />
-    <input type="submit" value="Edit Order" /> <br />
+    <input type="number" name="price" /> <br /> <br />
+    <input type="submit" value="Edit Order" /> <br /> <br />
+    <button><a href="/order/<%=order._id%>">Back to Order details</a></button>
+    <button><a href="/order">Back to All Orders</a></button>
   </form>
 </section>
 <%- include ("../partials/footer") %>
