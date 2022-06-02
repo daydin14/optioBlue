@@ -1,0 +1,19 @@
+.newbtn {
+    background-color: rgb(87, 253, 87);
+}
+.editbtn {
+    background-color: rgb(99, 126, 161);
+}
+.deletebtn {
+    background-color: crimson;
+}
+.allOrders {
+    background-color: yellow;
+}
+.showbtn {
+    background-color: rgb(226, 70, 43);
+}
+.newOrder {
+    display: flex;
+    justify-content: center;
+}

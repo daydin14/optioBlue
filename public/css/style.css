@@ -5,14 +5,15 @@ body {
 /* Home Page Drop Down Menu */
 .dropdown {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   border-radius: 800px;
 }
 .menu {
   display: block;
   border: none;
   border-radius: 100px;
-  width: 25%;
+  width: 20%;
   background-color: lightblue;
   color: whitesmoke;
   font-size: 48px;
@@ -21,13 +22,14 @@ body {
 }
 .menuLinks {
   display: none;
-  position: fixed;
+  position: relative;
   background-color: lightblue;
   /* min-width: 300px; */
   width: 20%;
   font-size: 32px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 150;
+  margin-top: 10px;
 }
 .menuLinks a {
   color: whitesmoke;
@@ -56,8 +58,9 @@ body {
   position: relative;
   text-align: center;
   background-color: lightblue;
-  color: white;
+  color: #FF9030;
   font-size: 28px;
+  border-radius: 20px;
 }
 
 /* Services on Home Page and Service Page */
@@ -66,7 +69,7 @@ body {
   flex-flow: row wrap;
   justify-content: space-evenly;
   justify-content: center;
-  gap: 10px;
+  gap: 25px;
   background-color: whitesmoke;
   border-radius: 100px;
   width: 70%;
@@ -92,9 +95,12 @@ body {
   margin-right: auto;
 }
 .service p {
-  max-width: 300px;
+  max-width: 280px;
   text-align: center;
-  color: gray;
+  color: #FF9030;
+  font-size: 14px;
+  background-color: lightblue;
+  border-radius: 20px;
 }
 #title {
   color: whitesmoke;
@@ -131,4 +137,9 @@ button {
 input {
   border-radius: 20px;
   cursor: pointer;
+}
+
+/* Contact, login, reviews, services, signup, order-index */
+.homebtn {
+  background-color: orange;
 }

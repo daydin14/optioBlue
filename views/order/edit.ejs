@@ -7,18 +7,19 @@
     <li>Price: <%=order.price%></li>
   </ul>
 </section>
-
-<section>
+<button class="showbtn"><a href="/order/<%=order._id%>">Back to Order details</a></button>
+<button class="allOrders"><a href="/order">Back to All Orders</a></button>
+<section class="newOrder">
   <form action="/order/<%=order._id%>?_method=PUT" method="POST">
     <p>Clothing:</p>
     <input type="text" name="clothing" /> <br />
     <p>Quantity:</p>
-    <input type="number" name="qty" /> <br />
+    <input type="text" name="qty" /> <br />
     <p>Price:</p>
-    <input type="number" name="price" /> <br /> <br />
-    <input type="submit" value="Edit Order" /> <br /> <br />
-    <button><a href="/order/<%=order._id%>">Back to Order details</a></button>
-    <button><a href="/order">Back to All Orders</a></button>
+    <input type="text" name="price" /> <br /> <br />
+    <input type="submit" class="editbtn" value="Make These Changes" />
+    <br>
   </form>
 </section>
+
 <%- include ("../partials/footer") %>
